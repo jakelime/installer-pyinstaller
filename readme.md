@@ -1,16 +1,18 @@
-# This is donwloader for pip install pyinstaller
+# OfflineInstaller-Pyinstaller
 
-## Instructions are as follows
+## Instructions
 
-On the system that has access to internet
+1. Create requirements using `venv`
 
-The pip download command lets you download packages without installing them:
+   ``` powershell
+   python -m venv venv
+   .\venv\Scripts\activate
+   pip install pyinstaller
+   pip freeze > requirements.txt
+   ```
+   
+1. Download as offline packages
+ 
+   `pip download -r requirements.txt`
 
-`pip download -r requirements.txt`
-(In previous versions of pip, this was spelled pip install --download -r requirements.txt.)
-
-On the system that has no access to internet
-Then you can use
-
-`pip install --no-index --find-links /path/to/download/dir/ -r requirements.txt`
-to install those downloaded modules, without accessing the network.
+1. On the offline system, `pip install --no-index --find-links /path/to/download/dir/ -r requirements.txt`
