@@ -1,5 +1,7 @@
 # OfflineInstaller-Pyinstaller
 
+Built for `win10` or `win11`
+
 ## Instructions
 
 1. Create requirements using `venv`
